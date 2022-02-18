@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var homeRouter = require('./routes/home');
-// var catgresRouter = require('./routes/catgres');
+var catgresRouter = require('./routes/catgres');
 // var searchRouter = require('./routes/search');
 // var productRouter = require('./routes/product');
 // var deatalsRouter = require('./routes/deatals');
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(expressLoyut);
 app.use('/', homeRouter);
 // app.use('/search', searchRouter );
-// app.use('/catgres', catgresRouter );
+app.use('/catgres', catgresRouter );
 // app.use('/product', productRouter );
 // app.use('/deatals', deatalsRouter );
 

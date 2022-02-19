@@ -1,15 +1,29 @@
 <%- include('header'); -%>
-<h1>Products</h1>
+<!-- <h1>Products</h1> -->
 </*%= products %*/>
 <% for(let index =0; index < products.length; index++){ %> 
-    <h5 style="color: red;">
+<div class="card" style="width: 18rem;" row-cols-1 row-cols-md-2 g-4>
+    <img src="<%= products[index].thumbnail %>" class="card-img-top" alt="...">
+    <div class="card-body">
+
+        <h5 class="card-title">
     <%= products[index].title %>
 </h5>
-<img src="<%= products[index].thumbnail %>" alt="">
+<p class="card-text"><%= products[index].description %></p>
+</div>
+
+<ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= products[index].price %></li>
+    <li class="list-group-item"><%= products[index].discountPercentage %></li>
+    <li class="list-group-item"><%= products[index].rating %></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link"><%= products[index].stock %></a>
+    <a href="#" class="card-link"><%= products[index].brand %></a>
+  </div>
+
 <% } %>
 <%- include('footer'); -%>
-
-
-
+</div>
 
 

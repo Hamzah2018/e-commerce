@@ -14,7 +14,7 @@ var axios = require('axios').default;
 router.get('/', (req, res, next) => {
   axios.get("https://dummyjson.com/products").then((prod) => {
       // console.log(prod.data);
-  res.render('product', { title: 'E-Commerce',products:JSON.stringify( prod.data.products)});
+  res.render('product', { title: 'E-Commerce',products: prod.data.products});
 });
 });
 // res.render('products',{title: 'preduct page here',products:data.data})

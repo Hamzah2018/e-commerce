@@ -1,6 +1,11 @@
 <%- include('header'); -%>
 <h1>Products</h1>
-<%= Products =>
+<%= products %>
+<% for(let index =0; index < products.length; index++){ %> 
+    <h5>
+    <%= products[index].title %>
+</h5>
+<% } %>
 <%- include('footer'); -%>
 
 

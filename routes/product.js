@@ -6,17 +6,15 @@ var axios = require('axios').default;
 // router.get('/', function(req, res, next) {
 //     res.render('product', { title: 'E-Commerce' });
 //   });
- 
+
   // module.exports = router;
 
 /* GET users listing. */
 
 router.get('/', (req, res, next) => {
   axios.get("https://dummyjson.com/products").then((prod) => {
-   
-      console.log(prod.data);
-  
-  res.render('product', { title: 'E-Commerce',products:data.data });
+      // console.log(prod.data);
+  res.render('product', { title: 'E-Commerce',products:JSON.stringify( prod.data.products)});
 });
 });
 // res.render('products',{title: 'preduct page here',products:data.data})

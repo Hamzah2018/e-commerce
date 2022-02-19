@@ -9,7 +9,7 @@ var logger = require('morgan');
 var homeRouter = require('./routes/home');
 var catgresRouter = require('./routes/catgres');
 // var searchRouter = require('./routes/search');
-// var productRouter = require('./routes/product');
+var productRouter = require('./routes/product'); 
 // var deatalsRouter = require('./routes/deatals');
 // var usersRouter = require('./routes/users');
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRouter);
 // app.use('/search', searchRouter );
 app.use('/catgres', catgresRouter );
-// app.use('/product', productRouter );
+app.use('/product', productRouter ); 
 // app.use('/deatals', deatalsRouter );
 
 // catch 404 and forward to error handler
